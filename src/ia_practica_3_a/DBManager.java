@@ -73,7 +73,6 @@ public class DBManager {
 	}
 	
 	private Rule searchRulesWithFacts(ArrayList<Rule> rulesDB, ArrayList<String> factsDB) {
-
 		int cnt = 0;
 		for (Rule rule : rulesDB) {
 			// Checamos existencia de condiciones en los hechos
@@ -84,7 +83,6 @@ public class DBManager {
 			}
 			cnt++;
 		}
-
 		return null;
 	}
 
@@ -97,12 +95,10 @@ public class DBManager {
 	}
 
 	private boolean conditionIsInFacts(String condition, ArrayList<String> factsDB) {
-
 		for (String fact : factsDB) {
 			if (condition.equals(fact))
 				return true;
 		}
-
 		return false;
 	}
 
@@ -134,11 +130,8 @@ public class DBManager {
 
 			// First token IF.
 			String token = tokenizer.nextToken();
-
 			String tempString = "";
-
 			ArrayList<String> conditons = new ArrayList<String>();
-
 			String fact;
 
 			while (tokenizer.hasMoreTokens()) {
@@ -156,7 +149,6 @@ public class DBManager {
 			Rule ruleClass = new Rule(ruleCnt, conditons, fact);
 			classRulesArray.add(ruleClass);
 		}
-
 		return classRulesArray;
 	}
 

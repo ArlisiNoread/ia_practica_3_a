@@ -14,9 +14,7 @@ public class Principal {
 			e.printStackTrace();
 			return;
 		}
-		
 		new MenuEjecución().start();
-		
 	}
 
 }
